@@ -1,0 +1,80 @@
+/* fixed */
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+/* Dark overlay behind content */
+#root::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* Movie List */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+/* Movie Card */
+.movie-card {
+  background-color: rgba(0,0,0,0.7);
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;          /* ✅ uniform height */
+  object-fit: cover;      /* ✅ maintain aspect ratio and crop */
+  display: block;
+}
+
+.movie-card h3 {
+  margin: 0.5rem 0;
+}
+
+.movie-card p {
+  color: #ccc;
+}
+
+.movie-card strong {
+  color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
